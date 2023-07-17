@@ -1,0 +1,106 @@
+ /* .footer{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    column-gap: 20px;
+} */
+.footer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(38, 38, 143);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+.footer__columns{
+    display: flex;
+    justify-content: center;
+} 
+.footer__col{
+    margin: 20px;
+    line-height: 1;
+}
+hr{
+    width: 80%;
+}
+.footer__links{
+    display: flex;
+    justify-content: space-around;
+}
+.footer__links__text,.footer__links__logo{
+    display: flex;
+}
+.whitesquare{
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff95;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+.footer__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ .footer__text p{
+    text-align: center;
+    width: 50%;
+} 
+.footer__text p:first-child{
+    position: relative;
+    top: 20px;
+}
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+    .footer__columns{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .first__col{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .footer__links__text{
+        width: 30%;
+        flex-wrap: wrap;
+    }
+    .footer__links__text p{
+    margin-bottom: 0;
+    }
+    .footer__text p{
+        width: 100%;
+    }
+    .footer__text{
+         align-items:center; 
+    }
+    .footer__text p{
+         text-align: start; 
+        width: 80%;
+    }
+}
+@media screen and (max-width:600px) {
+    .footer__columns{
+        flex-direction: column;
+    }
+    .footer__links{
+        flex-direction: column;
+    }
+    .footer__text{
+        align-items:start;
+    }
+    .footer__text p{
+        text-align: start;
+        width: 100%;
+    }
+    .footer__col{
+        margin-left: 0px;
+    }
+}
